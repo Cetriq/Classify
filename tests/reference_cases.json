@@ -1,0 +1,283 @@
+[
+  {
+    "name": "Socialtjänstärenden barn (K3 R3 T3 LoA3)",
+    "description": "Socialtjänstärenden med barn, Art. 9 data, OSL-sekretess, RTO 4h",
+    "input": {
+      "object_id": "ref-001",
+      "object_name": "Socialtjänst ärendesystem",
+      "object_type": "system",
+      "personal_data_categories": ["health", "social_vulnerability", "minors"],
+      "decision_impact": "authority_decision",
+      "rto_hours": 4.0,
+      "legal": {
+        "osl_secret": true,
+        "article9": true,
+        "article10": false,
+        "minors": true,
+        "public_exposure": false,
+        "automated_decision": false
+      },
+      "external_dependencies": [],
+      "recipients": []
+    },
+    "expected": {
+      "krt": { "K": 3, "R": 3, "T": 3 },
+      "loa": 3
+    }
+  },
+  {
+    "name": "Nyhetsbrev (K1 R1 T1 LoA1)",
+    "description": "Enkel nyhetsbrevslista, 5000 mottagare, namn + e-post, RTO 5 dagar",
+    "input": {
+      "object_id": "ref-002",
+      "object_name": "Kommunnyhetsbrev",
+      "object_type": "application",
+      "personal_data_categories": ["contact_info"],
+      "volumes": {
+        "data_subjects": 5000
+      },
+      "decision_impact": "none",
+      "rto_hours": 120.0,
+      "legal": {
+        "osl_secret": false,
+        "article9": false,
+        "article10": false,
+        "minors": false,
+        "public_exposure": false,
+        "automated_decision": false
+      },
+      "external_dependencies": [],
+      "recipients": []
+    },
+    "expected": {
+      "krt": { "K": 1, "R": 1, "T": 1 },
+      "loa": 1
+    }
+  },
+  {
+    "name": "Personalakter disciplinär (K3 R2 T2 LoA3)",
+    "description": "Personalakter med disciplinärenden, 2000 anställda, kan innehålla Art. 10 data",
+    "input": {
+      "object_id": "ref-003",
+      "object_name": "HR personalakter",
+      "object_type": "system",
+      "personal_data_categories": ["employment", "criminal_convictions"],
+      "volumes": {
+        "data_subjects": 2000
+      },
+      "decision_impact": "support",
+      "rto_hours": 24.0,
+      "legal": {
+        "osl_secret": false,
+        "article9": false,
+        "article10": true,
+        "minors": false,
+        "public_exposure": false,
+        "automated_decision": false
+      },
+      "external_dependencies": [],
+      "recipients": []
+    },
+    "expected": {
+      "krt": { "K": 3, "R": 2, "T": 2 },
+      "loa": 3
+    }
+  },
+  {
+    "name": "Vårdsystem kritiskt (K3 R3 T3 LoA3)",
+    "description": "Vårdregister med hälsodata, säkerhetskritiskt, RTO 2h",
+    "input": {
+      "object_id": "ref-004",
+      "object_name": "Vårdregistersystem",
+      "object_type": "system",
+      "personal_data_categories": ["health", "personal_number", "biometric"],
+      "volumes": {
+        "data_subjects": 15000
+      },
+      "decision_impact": "safety",
+      "rto_hours": 2.0,
+      "legal": {
+        "osl_secret": true,
+        "article9": true,
+        "article10": false,
+        "minors": true,
+        "public_exposure": false,
+        "automated_decision": false
+      },
+      "external_dependencies": ["BankID", "Nationellt patientregister"],
+      "recipients": ["Vårdpersonal", "1177"]
+    },
+    "expected": {
+      "krt": { "K": 3, "R": 3, "T": 3 },
+      "loa": 3
+    }
+  },
+  {
+    "name": "Skoladministration (K2 R2 T2 LoA2)",
+    "description": "Skoladministrationssystem, barn, måttlig beslutspåverkan",
+    "input": {
+      "object_id": "ref-005",
+      "object_name": "Skoladministrationssystem",
+      "object_type": "system",
+      "personal_data_categories": ["basic_identifiers", "personal_number", "minors"],
+      "volumes": {
+        "data_subjects": 8000
+      },
+      "decision_impact": "support",
+      "rto_hours": 8.0,
+      "legal": {
+        "osl_secret": false,
+        "article9": false,
+        "article10": false,
+        "minors": true,
+        "public_exposure": false,
+        "automated_decision": false
+      },
+      "external_dependencies": ["BankID"],
+      "recipients": []
+    },
+    "expected": {
+      "krt": { "K": 2, "R": 2, "T": 2 },
+      "loa": 2
+    }
+  },
+  {
+    "name": "Ekonomisystem utbetalningar (K2 R3 T2 LoA3)",
+    "description": "Ekonomisystem för utbetalningar, myndighetsbeslut, finansiell data",
+    "input": {
+      "object_id": "ref-006",
+      "object_name": "Ekonomisystem utbetalningar",
+      "object_type": "system",
+      "personal_data_categories": ["financial", "personal_number"],
+      "volumes": {
+        "data_subjects": 25000
+      },
+      "decision_impact": "authority_decision",
+      "rto_hours": 24.0,
+      "legal": {
+        "osl_secret": false,
+        "article9": false,
+        "article10": false,
+        "minors": false,
+        "public_exposure": false,
+        "automated_decision": true
+      },
+      "external_dependencies": ["BankID", "Bankgirot"],
+      "recipients": []
+    },
+    "expected": {
+      "krt": { "K": 2, "R": 3, "T": 2 },
+      "loa": 3
+    }
+  },
+  {
+    "name": "Räddningstjänst (K2 R3 T3 LoA3)",
+    "description": "Räddningstjänst larmsystem, säkerhetskritiskt, måste vara tillgängligt 24/7",
+    "input": {
+      "object_id": "ref-007",
+      "object_name": "Räddningstjänst larmsystem",
+      "object_type": "system",
+      "personal_data_categories": ["location", "contact_info"],
+      "decision_impact": "safety",
+      "rto_hours": 0.5,
+      "legal": {
+        "osl_secret": false,
+        "article9": false,
+        "article10": false,
+        "minors": false,
+        "public_exposure": false,
+        "automated_decision": false
+      },
+      "external_dependencies": ["GPS", "Mobilnät"],
+      "recipients": []
+    },
+    "expected": {
+      "krt": { "K": 2, "R": 3, "T": 3 },
+      "loa": 3
+    }
+  },
+  {
+    "name": "Skyddade identiteter (K3 R2 T2 LoA3)",
+    "description": "Register över skyddade identiteter, högsta konfidentialitet",
+    "input": {
+      "object_id": "ref-008",
+      "object_name": "Skyddade identiteter register",
+      "object_type": "dataset",
+      "personal_data_categories": ["protected_identity", "retained_address"],
+      "volumes": {
+        "data_subjects": 150
+      },
+      "decision_impact": "support",
+      "rto_hours": 48.0,
+      "legal": {
+        "osl_secret": true,
+        "article9": false,
+        "article10": false,
+        "minors": false,
+        "public_exposure": false,
+        "automated_decision": false
+      },
+      "external_dependencies": [],
+      "recipients": []
+    },
+    "expected": {
+      "krt": { "K": 3, "R": 2, "T": 2 },
+      "loa": 3
+    }
+  },
+  {
+    "name": "Statistikdatabas anonym (K1 R1 T1 LoA1)",
+    "description": "Anonymiserad statistikdatabas för forskning, öppna data",
+    "input": {
+      "object_id": "ref-009",
+      "object_name": "Statistikdatabas",
+      "object_type": "dataset",
+      "personal_data_categories": [],
+      "decision_impact": "none",
+      "rto_hours": 168.0,
+      "legal": {
+        "osl_secret": false,
+        "article9": false,
+        "article10": false,
+        "minors": false,
+        "public_exposure": true,
+        "automated_decision": false
+      },
+      "external_dependencies": [],
+      "recipients": ["Allmänheten"]
+    },
+    "expected": {
+      "krt": { "K": 1, "R": 1, "T": 1 },
+      "loa": 1
+    }
+  },
+  {
+    "name": "Fackligt medlemsregister (K3 R2 T1 LoA3)",
+    "description": "Fackligt medlemsregister, Art. 9 känsliga data",
+    "input": {
+      "object_id": "ref-010",
+      "object_name": "Fackligt medlemsregister",
+      "object_type": "system",
+      "personal_data_categories": ["union"],
+      "volumes": {
+        "data_subjects": 500
+      },
+      "decision_impact": "support",
+      "rto_hours": 72.0,
+      "legal": {
+        "osl_secret": false,
+        "article9": true,
+        "article10": false,
+        "minors": false,
+        "public_exposure": false,
+        "automated_decision": false
+      },
+      "external_dependencies": [],
+      "recipients": []
+    },
+    "expected": {
+      "krt": { "K": 3, "R": 2, "T": 1 },
+      "loa": 3
+    }
+  }
+]
