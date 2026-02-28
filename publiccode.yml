@@ -1,0 +1,46 @@
+publiccodeYmlVersion: 0.3
+name: Classify
+url: "https://github.com/Cetriq/Classify"
+releaseDate: 2025-10-29
+softwareVersion: 1.0.0
+platforms:
+  - web
+categories:
+  - it-security
+developmentStatus: concept
+softwareType: standalone/web
+description:
+  sv:
+    shortDescription: Klassning av system, processer eller annat som innehåller information
+    longDescription: "Klassa automatiserar klassificering av IT-system, applikationer, processer och datamängder enligt tre säkerhetsdimensioner:
+
+K (Konfidentialitet): Nivå 1-3
+R (Riktighet): Nivå 1-3
+T (Tillgänglighet): Nivå 1-3
+Baserat på K/R/T-klassningen beräknas även:
+
+LoA (Level of Assurance): Autentiseringsnivå 1-3
+Huvudfunktioner
+✅ Hybrid klassningsmotor - Deterministiska regler + AI-tolkningar
+ ✅ Privacy-by-design - AI ser endast metadata, aldrig råa personuppgifter 
+✅ GDPR-kompatibel - Art. 9/10, känsliga personuppgifter 
+✅ OSL-medveten - Svensk sekretesslagstiftning 
+✅ Transparent rationale - Tydliga förklaringar för varje beslut ✅ Åtgärdsrekommendationer - Konkreta säkerhetsåtgärder per nivå 
+✅ Revisionslogg - Fullständig spårbarhet"
+    features:
+      - Informationsklassning
+legal:
+  license: CC0-1.0
+  repoOwner: CETRIQ
+maintenance:
+  type: none
+  contacts:
+    - name: Clas Törnquist
+      email: clas.tornquist@hotmail.com
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - sv
+sv:
+  countryExtensionVersion: 1.0
+  disFas1: false
