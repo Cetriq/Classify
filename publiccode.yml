@@ -8,12 +8,14 @@ platforms:
 categories:
   - it-security
   - data-analytics
+  - compliance-management
+  - workflow-management
 developmentStatus: concept
 softwareType: standalone/web
 description:
   sv:
     shortDescription: Klassning av system, processer eller annat som hanterar information
-    longDescription: "Klassning av system, processer eller annat som hanterar information. Används av IT-säkerhet och annan personal som hanterar information på ett eller annat sätt. Jag fyller på med lite mer text för att komma förbi 150 tecken. Kanske något för långt för att skriva manuellt. hkhjkjhkj hk khhk khkk  khkhhkh hkhk mn,m uh ioupighkhjp phiiouhpiuh piuhpiuhpiuhpiuhpiuhpiuhpiuhpiuhpiuhpiuhkhj iuhpiuhpiuhpiuhpiuhpiuhipuhipuhpiuhpiuhpiuhipuhpiuhpiuhpiuhiuh iuipuhphpiuhpiuhpiuhiuhiuhiuhi hiu iuh iuhi uhi uhiuhi hiuh iuhiuh iuhi huihui uhiuh iuhi uhi uhiuh iuhiuh iuhiu hihiu hiuhiu hiuhi uhi uhi hi "
+    longDescription: "Klassning av system, processer eller annat som hanterar information. Används av IT-säkerhet och annan personal som hanterar information på ett eller annat sätt. Jag fyller på med lite mer text för att komma förbi 150 tecken. Kanske något för långt för att skriva manuellt. "
     features:
       - systemklassning
       - processklassning
@@ -31,4 +33,4 @@ localisation:
     - sv
 sv:
   countryExtensionVersion: "1.0"
-  disFas1: true
+  disFas1: false
