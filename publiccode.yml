@@ -1,1 +1,40 @@
-
+publiccodeYmlVersion: "0.3"
+name: Klassa
+url: https://github.com/Cetriq/Classify
+releaseDate: 2026-03-02
+softwareVersion: 1.0.0
+platforms:
+  - web
+  - linux
+categories:
+  - compliance-management
+  - data-analytics
+  - business-intelligence
+developmentStatus: development
+softwareType: standalone/web
+description:
+  sv:
+    shortDescription: AI-drivet informationsklassningssystem för svensk offentlig sektor med stöd för GDPR, OSL och kommunala säkerhetskrav.
+    longDescription: Klassa automatiserar klassificering av IT-system, applikationer och datamängder enligt K/R/T-dimensioner (Konfidentialitet, Riktighet, Tillgänglighet). Systemet använder hybrid klassningsmotor med deterministiska regler och AI-tolkningar för att säkerställa GDPR-kompatibilitet och svensk sekretesslagstiftning.
+    features:
+      - Hybrid klassningsmotor med deterministiska regler och AI-tolkningar
+      - GDPR-kompatibel klassning med privacy-by-design
+      - K/R/T-klassning med automatisk LoA-beräkning
+      - Åtgärdsrekommendationer baserat på säkerhetsnivå
+      - Transparent rationale och fullständig revisionslogg
+legal:
+  license: CC0-1.0
+  repoOwner: Cetriq
+maintenance:
+  type: internal
+  contacts:
+    - name: Cetriq
+      affiliation: Cetriq
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - sv
+    - en
+sv:
+  countryExtensionVersion: "1.0"
+  disFas1: true
