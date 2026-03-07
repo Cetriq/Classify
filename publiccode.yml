@@ -9,21 +9,20 @@ platforms:
 categories:
   - compliance-management
   - data-analytics
+  - business-process-management
   - it-security
-  - workflow-management
-  - identity-management
 developmentStatus: development
 softwareType: standalone/web
 description:
   sv:
-    shortDescription: AI-drivet informationsklassningssystem för svensk offentlig sektor med GDPR- och OSL-stöd
-    longDescription: Automatiserad klassificering av IT-system enligt K/R/T-dimensioner (Konfidentialitet, Riktighet, Tillgänglighet) för svenska myndigheter. Beräknar säkerhetsnivåer, LoA och ger konkreta åtgärdsrekommendationer.
+    shortDescription: AI-drivet informationsklassningssystem för svensk offentlig sektor med stöd för GDPR, OSL och kommunala säkerhetskrav.
+    longDescription: Klassa automatiserar klassificering av IT-system enligt K/R/T-säkerhetsdimensioner (Konfidentialitet, Riktighet, Tillgänglighet) och beräknar Level of Assurance. Systemet är byggt med privacy-by-design och inkluderar deterministiska regler kombinerat med AI-tolkningar för GDPR och OSL-kompatibilitet.
     features:
-      - Hybrid klassningsmotor med AI och deterministiska regler
-      - GDPR-kompatibel med privacy-by-design
-      - Transparent rationale och revisionslogg
-      - Åtgärdsrekommendationer per säkerhetsnivå
-      - Export till JSON/PDF
+      - Hybrid klassningsmotor med deterministiska regler och AI-tolkningar
+      - GDPR och OSL-kompatibel klassificering med privacy-by-design
+      - Automatisk beräkning av K/R/T-nivåer och Level of Assurance
+      - Åtgärdsrekommendationer och transparent rationale för beslut
+      - Fullständig revisionslogg och spårbarhet
 legal:
   license: CC0-1.0
   repoOwner: Cetriq
