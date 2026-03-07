@@ -9,23 +9,18 @@ platforms:
 categories:
   - compliance-management
   - data-analytics
-  - business-process-management
-  - it-security
-  - document-management
-  - workflow-management
 developmentStatus: development
 softwareType: standalone/web
 description:
   sv:
     shortDescription: AI-drivet informationsklassningssystem för svensk offentlig sektor med stöd för GDPR, OSL och kommunala säkerhetskrav.
-    longDescription: Automatiserar klassificering av IT-system enligt K/R/T-modellen (Konfidentialitet, Riktighet, Tillgänglighet). Använder hybrid klassningsmotor med deterministiska regler och AI-tolkningar. Privacy-by-design med fullständig GDPR-kompatibilitet och transparent rationale för varje beslut.
+    longDescription: Klassa automatiserar klassificering av IT-system, applikationer, processer och datamängder enligt KRT-dimensioner (Konfidentialitet, Riktighet, Tillgänglighet). Systemet använder hybrid klassningsmotor med deterministiska regler och AI-tolkningar för att beräkna säkerhetsnivåer och Level of Assurance.
     features:
-      - Hybrid klassningsmotor med deterministiska regler och AI-tolkningar
-      - Privacy-by-design - AI ser endast metadata
-      - GDPR-kompatibel med stöd för känsliga personuppgifter
-      - Automatisk beräkning av LoA (Level of Assurance)
-      - Transparent rationale och åtgärdsrekommendationer
+      - Automatisk KRT-klassificering enligt tre säkerhetsdimensioner
+      - GDPR- och OSL-kompatibel privacy-by-design arkitektur
+      - Transparent rationale med konkreta åtgärdsrekommendationer
       - Fullständig revisionslogg och spårbarhet
+      - API för batchklassificering och systemintegration
 legal:
   license: CC0-1.0
   repoOwner: Cetriq
@@ -53,7 +48,6 @@ x-samhallskodex:
       - rest
     identity:
       - bankid
-      - oauth2
       - jwt
   ai:
     enabled: true
@@ -62,7 +56,7 @@ x-samhallskodex:
       - decision-support
     humanInLoop: true
   governance:
-    dataHosting:
-      locality: sweden
     vendorDependency: medium
     opennessLevel: open-source
+    dataHosting:
+      locality: sweden
