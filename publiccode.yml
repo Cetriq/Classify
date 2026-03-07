@@ -10,18 +10,22 @@ categories:
   - compliance-management
   - data-analytics
   - business-process-management
+  - it-security
+  - document-management
+  - workflow-management
 developmentStatus: development
 softwareType: standalone/web
 description:
   sv:
     shortDescription: AI-drivet informationsklassningssystem för svensk offentlig sektor med stöd för GDPR, OSL och kommunala säkerhetskrav.
-    longDescription: Klassa automatiserar klassificering av IT-system, applikationer, processer och datamängder enligt KRT-dimensionerna (Konfidentialitet, Riktighet, Tillgänglighet). Systemet använder hybrid klassningsmotor med deterministiska regler och AI-tolkningar för att säkerställa GDPR-kompatibilitet och följer svensk sekretesslagstiftning.
+    longDescription: Automatiserar klassificering av IT-system enligt K/R/T-modellen (Konfidentialitet, Riktighet, Tillgänglighet). Använder hybrid klassningsmotor med deterministiska regler och AI-tolkningar. Privacy-by-design med fullständig GDPR-kompatibilitet och transparent rationale för varje beslut.
     features:
       - Hybrid klassningsmotor med deterministiska regler och AI-tolkningar
-      - Privacy-by-design - AI ser endast metadata, aldrig råa personuppgifter
-      - GDPR-kompatibel klassning med stöd för Art. 9/10 och känsliga personuppgifter
-      - Transparent rationale med tydliga förklaringar för varje beslut
-      - Åtgärdsrekommendationer med konkreta säkerhetsåtgärder per nivå
+      - Privacy-by-design - AI ser endast metadata
+      - GDPR-kompatibel med stöd för känsliga personuppgifter
+      - Automatisk beräkning av LoA (Level of Assurance)
+      - Transparent rationale och åtgärdsrekommendationer
+      - Fullständig revisionslogg och spårbarhet
 legal:
   license: CC0-1.0
   repoOwner: Cetriq
@@ -36,21 +40,29 @@ localisation:
     - sv
     - en
 x-samhallskodex:
+  profileVersion: "0.1"
   architecture:
     ui:
       platform: web
+      framework: Next.js
     backend:
       architecture: container
-  profileVersion: "0.1"
+      runtime: Python
   integration:
     apiStyles:
       - rest
+    identity:
+      - bankid
+      - oauth2
+      - jwt
   ai:
     enabled: true
     useCases:
       - classification
+      - decision-support
     humanInLoop: true
   governance:
-    opennessLevel: open-source
     dataHosting:
-      locality: municipality
+      locality: sweden
+    vendorDependency: medium
+    opennessLevel: open-source
