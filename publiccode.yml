@@ -1,7 +1,7 @@
 publiccodeYmlVersion: "0.3"
 name: Klassa
 url: https://github.com/Cetriq/Classify
-releaseDate: 2026-03-02
+releaseDate: 2026-03-07
 softwareVersion: 1.0.0
 platforms:
   - web
@@ -9,32 +9,50 @@ platforms:
 categories:
   - compliance-management
   - data-analytics
-  - business-intelligence
+  - it-security
+  - workflow-management
+  - identity-management
 developmentStatus: development
 softwareType: standalone/web
 description:
   sv:
-    shortDescription: AI-drivet informationsklassningssystem för svensk offentlig sektor med stöd för GDPR, OSL och kommunala säkerhetskrav.
-    longDescription: Klassa automatiserar klassificering av IT-system, applikationer och datamängder enligt K/R/T-dimensioner (Konfidentialitet, Riktighet, Tillgänglighet). Systemet använder hybrid klassningsmotor med deterministiska regler och AI-tolkningar för att säkerställa GDPR-kompatibilitet och svensk sekretesslagstiftning.
+    shortDescription: AI-drivet informationsklassningssystem för svensk offentlig sektor med GDPR- och OSL-stöd
+    longDescription: Automatiserad klassificering av IT-system enligt K/R/T-dimensioner (Konfidentialitet, Riktighet, Tillgänglighet) för svenska myndigheter. Beräknar säkerhetsnivåer, LoA och ger konkreta åtgärdsrekommendationer.
     features:
-      - Hybrid klassningsmotor med deterministiska regler och AI-tolkningar
-      - GDPR-kompatibel klassning med privacy-by-design
-      - K/R/T-klassning med automatisk LoA-beräkning
-      - Åtgärdsrekommendationer baserat på säkerhetsnivå
-      - Transparent rationale och fullständig revisionslogg
+      - Hybrid klassningsmotor med AI och deterministiska regler
+      - GDPR-kompatibel med privacy-by-design
+      - Transparent rationale och revisionslogg
+      - Åtgärdsrekommendationer per säkerhetsnivå
+      - Export till JSON/PDF
 legal:
   license: CC0-1.0
   repoOwner: Cetriq
 maintenance:
   type: internal
   contacts:
-    - name: Cetriq
-      affiliation: Cetriq
+    - name: Clas Törnquist
+      email: clas.tornquist@hotmail.com
 localisation:
   localisationReady: true
   availableLanguages:
     - sv
     - en
-sv:
-  countryExtensionVersion: "1.0"
-  disFas1: true
+x-samhallskodex:
+  architecture:
+    ui:
+      platform: web
+    backend:
+      architecture: container
+  profileVersion: "0.1"
+  integration:
+    apiStyles:
+      - rest
+  ai:
+    enabled: true
+    useCases:
+      - classification
+    humanInLoop: true
+  governance:
+    opennessLevel: open-source
+    dataHosting:
+      locality: municipality
